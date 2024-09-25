@@ -1,0 +1,53 @@
+Inter VLAN Routing :
+
+multiple broadcast domains, Routers or layer 3 switches are used for intercommunication between the different VLANs.The process of intercommunication of the different Vlans is known as Inter Vlan Routing (IVR).
+•	 Inter VLAN Routing can be achieved through a layer-3 device i.e. Router or layer-3 Switch.
+•	 Why use L3 SWITCH because the layer 3 switch provides both management and routing services.
+L3 SWITCH  advantages –
+1.	Speed: Inter-VLAN routing by Layer 3 switch is faster than other methods, as the Layer 3 switch can perform the routing process quickly, without requiring the intervention of an external router.
+2.	Cost-effective: Using a Layer 3 switch for inter-VLAN routing can be more cost-effective than using a separate router, as it eliminates the need for an external router and its associated costs.
+3.	Scalability: Inter-VLAN routing by Layer 3 switch is scalable, as additional VLANs can be added easily without significant changes to the network topology.
+4.	Security: Inter-VLAN routing by Layer 3 switch provides better security than other methods, as it allows for the creation of access control lists (ACLs) to restrict traffic between VLANs.
+
+•	Process-  first the packet is delivered to the layer 3 switch and then to the destination 
+1.	Take L3 switch and 4 PC’s and connect with the help of automatic cable.
+2.	Then configure all PC’s as per your network.
+3.	Click on switch (CLI) and create the VLAN’s as per your network(how many VLAN’s/networks you want).
+4.	Then set the range of PC’s as per your VLAN’s.
+5.	After this process IP ROUTING process will be start .on the switch continue this process 
+Creating vlan’s-
+ En
+Conf t
+Valn 2
+Name it
+Ex
+ 
+En
+Conf t
+Vlan 3
+Name hr
+Ex
+Int range fa0/1-2
+Switchport access vlan 2
+Ex
+Int range fa0/3-4
+Switchport access vlan 3
+Ex
+Commands- on switch for IP ROUTING 
+Ip routing
+Int vlan 2(number of vlan)
+Ip add 192.168.10.1  255.255.255.0
+No shut
+Ex.
+Int vlan 3(number of vlan)
+Ip add 192.168.11.1  255.255.255.0
+No shut
+Ex.
+
+Same command as per you creating your VLANs/networks and run it
+
+
+
+
+ 
+
